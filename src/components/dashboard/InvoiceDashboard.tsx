@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { 
   Card, 
@@ -44,7 +43,7 @@ import {
 } from "lucide-react";
 
 // Mock invoice data
-const mockInvoices = [
+const mockInvoices: Invoice[] = [
   {
     id: "1",
     invoiceNumber: "FE-A0012345",
@@ -52,7 +51,7 @@ const mockInvoices = [
     dueDate: "2025-05-15",
     clientName: "Empresa Grande S.A.",
     amount: 5850000,
-    status: "approved",
+    status: "approved" as const,
     paymentDate: "2025-04-03"
   },
   {
@@ -62,7 +61,7 @@ const mockInvoices = [
     dueDate: "2025-05-20",
     clientName: "Corporación Nacional Ltda.",
     amount: 7250000,
-    status: "pending",
+    status: "pending" as const,
     paymentDate: null
   },
   {
@@ -72,7 +71,7 @@ const mockInvoices = [
     dueDate: "2025-05-25",
     clientName: "Empresa Grande S.A.",
     amount: 3450000,
-    status: "processing",
+    status: "processing" as const,
     paymentDate: null
   },
   {
@@ -82,7 +81,7 @@ const mockInvoices = [
     dueDate: "2025-06-01",
     clientName: "Distribuidora Global S.A.S.",
     amount: 9250000,
-    status: "rejected",
+    status: "rejected" as const,
     paymentDate: null
   },
   {
@@ -92,7 +91,7 @@ const mockInvoices = [
     dueDate: "2025-06-15",
     clientName: "Corporación Nacional Ltda.",
     amount: 4150000,
-    status: "approved",
+    status: "approved" as const,
     paymentDate: "2025-04-16"
   }
 ];
